@@ -1,0 +1,26 @@
+{
+  "name": "nu-u9h-readme-generator",
+  "version": "1.0.0",
+  "description": "a readme generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nearcatch/nu-u9h-readme-generator.git"
+  },
+  "keywords": [
+    "readme",
+    "node"
+  ],
+  "author": "nearcatch",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nearcatch/nu-u9h-readme-generator/issues"
+  },
+  "homepage": "https://github.com/nearcatch/nu-u9h-readme-generator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.2"
+  }
+}
