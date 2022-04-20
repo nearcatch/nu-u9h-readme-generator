@@ -44,8 +44,14 @@ function infoPrompt() {
       name: "email",
     },
     {
-      type: "input",
+      type: "list",
       message: "What is the project license?",
+      choices: [
+        "Apache 2.0",
+        "GNU GPL v3",
+        "MIT",
+        "WTFPL",
+      ],
       name: "license",
     },
   ]);
