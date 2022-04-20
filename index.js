@@ -40,9 +40,7 @@ inquirer
       name: "tests",
     },
   ])
-  .then((response) => {
-    const { title, description, install, usage, license, contribute, tests } = response;
-    console.log(response);
+  .then(({ title, description, install, usage, license, contribute, tests }) => {
     // let ghHtml = `\n`;
     // if (!github === "") {
     //   ghHtml = `<p>GitHub: ${github}</p>\n`;
