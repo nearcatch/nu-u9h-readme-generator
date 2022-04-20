@@ -5,54 +5,61 @@ function infoPrompt() {
   return inquirer.prompt([
     {
       type: "input",
-      message: "What is the project title?",
       name: "title",
+      message: "What is your project's title?",
     },
     {
       type: "input",
-      message: "What is the project description?",
       name: "description",
+      message: "Please write a short description of your project:",
     },
     {
       type: "input",
-      message: "What are the install instructions?",
       name: "install",
+      message: "What command is used to install the project?",
+      default() {
+        return 'npm i';
+      }
     },
     {
       type: "input",
-      message: "What is the usage information?",
       name: "usage",
+      message: "What should a user know about using this project?",
     },
     {
       type: "input",
-      message: "What are the test instructions?",
       name: "tests",
+      message: "What command is used to test the project?",
+      default() {
+        return 'npm test';
+      }
     },
     {
       type: "input",
-      message: "What are the contribution guidelines?",
       name: "contribute",
+      message: "What are the contribution guidelines?",
     },
     {
       type: "input",
-      message: "What is your GitHub username?",
       name: "github",
+      message: "GitHub username:",
     },
     {
       type: "input",
-      message: "What is your email?",
       name: "email",
+      message: "Email:",
     },
     {
       type: "list",
-      message: "What is the project license?",
+      name: "license",
+      message: "What license will the project have?",
       choices: [
         "Apache 2.0",
         "GNU GPL v3",
         "MIT",
         "WTFPL",
+        "none",
       ],
-      name: "license",
     },
   ]);
 }
@@ -85,14 +92,18 @@ ${description}
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Contributing](#contributing)
 - [Tests](#tests)
+- [Contributing](#contributing)
 - [Questions](#questions)
 - [License](#license)
 
 ## Installation
 
+Run the below command to install dependencies:
+
+\`\`\`
 ${install}
+\`\`\`
 
 ## Usage
 
@@ -100,7 +111,11 @@ ${usage}
 
 ## Tests
 
+Run the below command to test:
+
+\`\`\`
 ${tests}
+\`\`\`
 
 ## Contributing
 
@@ -108,7 +123,9 @@ ${contribute}
 
 ## Questions
 
-${github} ${email}
+Github: [https://github.com/${github}](https://github.com/${github})
+
+Email: [${email}](mailto:${email})
 
 ## License
 
