@@ -7,8 +7,6 @@
 *** Thanks again! Now go create something AMAZING! :D
 -->
 
-
-
 <!-- PROJECT SHIELDS -->
 <!--
 *** I'm using markdown "reference style" links for readability.
@@ -17,14 +15,13 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
+
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
-
-
 
 <div align="center">
 
@@ -36,15 +33,11 @@
     <a href="https://github.com/nearcatch/nu-u9h-readme-generator"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://nearcatch.github.io/nu-u9h-readme-generator/">View Demo</a>
-    ·
     <a href="https://github.com/nearcatch/nu-u9h-readme-generator/issues">Report Bug</a>
     ·
     <a href="https://github.com/nearcatch/nu-u9h-readme-generator/issues">Request Feature</a>
   </p>
 </div>
-
-
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -70,17 +63,21 @@
   </ol>
 </details>
 
-
-
 <!-- ABOUT THE PROJECT -->
+
 ## About the Project
 
 <div align="center">
-    <a href="https://nearcatch.github.io/nu-u9h-readme-generator/"><img style="width: 50%;" src="./assets/readme/full-page-screenshot.webp" /></a>
+    <video width="640" height="480" controls>
+      <source src="https://raw.githubusercontent.com/nearcatch/nu-u9h-readme-generator/main/assets/readme/demonstration.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+    </video>
 </div>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+<<<<<<< HEAD
+=======
 
 
 <!-- GETTING STARTED -->
@@ -107,35 +104,38 @@
 
 
 
+>>>>>>> 985e4b5182d5dd76c1e70290cf708e3169f5c778
 <!-- USAGE EXAMPLES -->
+
 ## Usage
 
 Run `node index.js` from the root of the code repository to begin readme creation. Answer the prompts and a readme will be generated in the current terminal location.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 ### Built With
 
+<<<<<<< HEAD
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [Node.js](https://nodejs.org/en/)
+=======
 * [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 * [Node.js](https://nodejs.org/en/)
 * [Inquirer.js](https://github.com/SBoudrias/Inquirer.js)
+>>>>>>> 985e4b5182d5dd76c1e70290cf708e3169f5c778
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 <!-- LICENSE -->
+
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 <!-- CONTACT -->
+
 ## Contact
 
 Jason Thekkekara - [LinkedIn][linkedin-url] - [Github](https://github.com/nearcatch)
@@ -144,19 +144,17 @@ Project Link: [https://github.com/nearcatch/nu-u9h-readme-generator](https://git
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 <!-- ACKNOWLEDGMENTS -->
+
 ## Acknowledgments
 
-* [othneildrew/Best-README-Template](https://github.com/othneildrew/Best-README-Template)
+- [othneildrew/Best-README-Template](https://github.com/othneildrew/Best-README-Template)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
 [contributors-shield]: https://img.shields.io/github/contributors/nearcatch/nu-u9h-readme-generator.svg?style=for-the-badge
 [contributors-url]: https://github.com/nearcatch/nu-u9h-readme-generator/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/nearcatch/nu-u9h-readme-generator.svg?style=for-the-badge
