@@ -56,6 +56,7 @@
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
+    <li><a href="#installation">Installation</a></li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -71,6 +72,19 @@
 <div align="center">
     <a href="https://nearcatch.github.io/nu-u9h-readme-generator/"><img style="width: 50%;" src="./assets/readme/full-page-screenshot.webp" /></a>
 </div>
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
+<!-- USAGE EXAMPLES -->
+## Installation
+
+Clone repo locally and then run:
+
+```
+npm i
+```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
