@@ -56,7 +56,13 @@
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
-    <li><a href="#installation">Installation</a></li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -77,14 +83,25 @@
 
 
 
-<!-- USAGE EXAMPLES -->
-## Installation
+<!-- GETTING STARTED -->
+## Getting Started
+### Prerequisites
 
-Clone repo locally and then run:
+1. Install [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git). (Only if cloning via command line.)
+2. Install [Node.js](https://nodejs.org/en/download/current/).
 
-```
-npm i
-```
+### Installation
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/nearcatch/nu-u9h-readme-generator.git
+   ```
+   Alternatively, download and open the ZIP archive directly from GitHub.
+
+2. Install required Node.js packages from the repo folder.
+   ```sh
+   npm install
+   ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -103,6 +120,7 @@ Run `node index.js` from the root of the code repository to begin readme creatio
 
 * [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 * [Node.js](https://nodejs.org/en/)
+* [Inquirer.js](https://github.com/SBoudrias/Inquirer.js)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
