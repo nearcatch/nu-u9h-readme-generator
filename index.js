@@ -18,8 +18,8 @@ function infoPrompt() {
       name: "install",
       message: "What command is used to install the project?",
       default() {
-        return 'npm i';
-      }
+        return "npm i";
+      },
     },
     {
       type: "input",
@@ -28,11 +28,11 @@ function infoPrompt() {
     },
     {
       type: "input",
-      name: "tests",
+      name: "test",
       message: "What command is used to test the project?",
       default() {
-        return 'npm test';
-      }
+        return "npm test";
+      },
     },
     {
       type: "input",
@@ -53,13 +53,7 @@ function infoPrompt() {
       type: "list",
       name: "license",
       message: "What license will the project have?",
-      choices: [
-        "Apache 2.0",
-        "GNU GPL v3",
-        "MIT",
-        "WTFPL",
-        "none",
-      ],
+      choices: ["Apache 2.0", "GNU GPL v3", "MIT", "WTFPL", "none"],
     },
   ]);
 }
@@ -75,7 +69,7 @@ function buildReadme({
   description,
   install,
   usage,
-  tests,
+  test,
   contribute,
   github,
   email,
@@ -114,7 +108,7 @@ ${usage}
 Run the below command to test:
 
 \`\`\`
-${tests}
+${test}
 \`\`\`
 
 ## Contributing
@@ -125,11 +119,8 @@ ${contribute}
 
 Github: [https://github.com/${github}](https://github.com/${github})
 
-Email: [${email}](mailto:${email})
-
-## License
-
-${license}`;
+Send further questions to [${email}](mailto:${email}).
+${buildLicenseSection(license)}`;
 }
 
 function chooseBadge(license) {
@@ -148,4 +139,27 @@ function chooseBadge(license) {
       "[![License: WTFPL](https://img.shields.io/badge/License-WTFPL-brightgreen.svg)](http://www.wtfpl.net/about/)";
   }
   return badge;
+}
+
+function buildLicenseSection(license) {
+  let licenseLink = "";
+  if (license === "Apache 2.0") {
+    licenseLink = "[Apache 2.0](https://opensource.org/licenses/Apache-2.0)";
+  } else if (license === "GNU GPL v3") {
+    licenseLink = "[GNU GPL v3](https://www.gnu.org/licenses/gpl-3.0)";
+  } else if (license === "MIT") {
+    licenseLink = "[MIT](https://opensource.org/licenses/MIT)";
+  } else if (license === "WTFPL") {
+    licenseLink = "[WTFPL](http://www.wtfpl.net/about/)";
+  }
+  let licenseSection;
+  if (license === "none") {
+    licenseSection = "";
+  } else {
+    licenseSection = `
+## License
+
+${licenseLink}`;
+  }
+  return licenseSection;
 }
