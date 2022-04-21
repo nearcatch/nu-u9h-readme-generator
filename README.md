@@ -67,13 +67,7 @@
 
 ## About the Project
 
-<div align="center">
-    <video width="640" height="480" controls>
-      <source src="https://raw.githubusercontent.com/nearcatch/nu-u9h-readme-generator/main/assets/readme/demonstration.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-    </video>
-</div>
-
+https://user-images.githubusercontent.com/692914/164360750-b93f9885-cbdb-4817-8335-5c9a750755b9.mp4
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
