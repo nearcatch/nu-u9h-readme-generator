@@ -5,48 +5,55 @@ function infoPrompt() {
   return inquirer.prompt([
     {
       type: "input",
-      message: "What is the project title?",
       name: "title",
+      message: "What is your project's title?",
     },
     {
       type: "input",
-      message: "What is the project description?",
       name: "description",
+      message: "Please write a short description of your project:",
     },
     {
       type: "input",
-      message: "What are the install instructions?",
       name: "install",
+      message: "What command is used to install the project?",
+      default() {
+        return "npm i";
+      },
     },
     {
       type: "input",
-      message: "What is the usage information?",
       name: "usage",
+      message: "What should a user know about using this project?",
     },
     {
       type: "input",
-      message: "What are the test instructions?",
-      name: "tests",
+      name: "test",
+      message: "What command is used to test the project?",
+      default() {
+        return "npm test";
+      },
     },
     {
       type: "input",
-      message: "What are the contribution guidelines?",
       name: "contribute",
+      message: "What are the contribution guidelines?",
     },
     {
       type: "input",
-      message: "What is your GitHub username?",
       name: "github",
+      message: "GitHub username:",
     },
     {
       type: "input",
-      message: "What is your email?",
       name: "email",
+      message: "Email:",
     },
     {
-      type: "input",
-      message: "What is the project license?",
+      type: "list",
       name: "license",
+      message: "What license will the project have?",
+      choices: ["Apache 2.0", "GNU GPL v3", "MIT", "WTFPL", "none"],
     },
   ]);
 }
@@ -62,7 +69,7 @@ function buildReadme({
   description,
   install,
   usage,
-  tests,
+  test,
   contribute,
   github,
   email,
@@ -79,14 +86,18 @@ ${description}
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Contributing](#contributing)
 - [Tests](#tests)
+- [Contributing](#contributing)
 - [Questions](#questions)
 - [License](#license)
 
 ## Installation
 
+Run the below command to install dependencies:
+
+\`\`\`
 ${install}
+\`\`\`
 
 ## Usage
 
@@ -94,7 +105,11 @@ ${usage}
 
 ## Tests
 
-${tests}
+Run the below command to test:
+
+\`\`\`
+${test}
+\`\`\`
 
 ## Contributing
 
@@ -102,11 +117,10 @@ ${contribute}
 
 ## Questions
 
-${github} ${email}
+Github: [https://github.com/${github}](https://github.com/${github})
 
-## License
-
-${license}`;
+Send further questions to [${email}](mailto:${email}).
+${buildLicenseSection(license)}`;
 }
 
 function chooseBadge(license) {
@@ -125,4 +139,27 @@ function chooseBadge(license) {
       "[![License: WTFPL](https://img.shields.io/badge/License-WTFPL-brightgreen.svg)](http://www.wtfpl.net/about/)";
   }
   return badge;
+}
+
+function buildLicenseSection(license) {
+  let licenseLink = "";
+  if (license === "Apache 2.0") {
+    licenseLink = "[Apache 2.0](https://opensource.org/licenses/Apache-2.0)";
+  } else if (license === "GNU GPL v3") {
+    licenseLink = "[GNU GPL v3](https://www.gnu.org/licenses/gpl-3.0)";
+  } else if (license === "MIT") {
+    licenseLink = "[MIT](https://opensource.org/licenses/MIT)";
+  } else if (license === "WTFPL") {
+    licenseLink = "[WTFPL](http://www.wtfpl.net/about/)";
+  }
+  let licenseSection;
+  if (license === "none") {
+    licenseSection = "";
+  } else {
+    licenseSection = `
+## License
+
+${licenseLink}`;
+  }
+  return licenseSection;
 }
