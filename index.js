@@ -1,6 +1,15 @@
+// include modules
 const fs = require("fs");
 const inquirer = require("inquirer");
 
+// prompt user for input, then generate readme
+infoPrompt().then((answers) => {
+  fs.writeFile("./generated.md", `${buildReadme(answers)}`, (err) =>
+    err ? console.error(err) : console.log("Success!")
+  );
+});
+
+// function for user input
 function infoPrompt() {
   return inquirer.prompt([
     {
@@ -58,13 +67,9 @@ function infoPrompt() {
   ]);
 }
 
-infoPrompt().then((answers) => {
-  fs.writeFile("./generated.md", `${buildReadme(answers)}`, (err) =>
-    err ? console.error(err) : console.log("Success!")
-  );
-});
-
+// function to build readme
 function buildReadme({
+  // deconstruct object from infoPrompt
   title,
   description,
   install,
@@ -123,6 +128,7 @@ Send further questions to [${email}](mailto:${email}).
 ${buildLicenseSection(license)}`;
 }
 
+// function to pick badge based on license
 function chooseBadge(license) {
   let badge = "";
   if (license === "Apache 2.0") {
@@ -141,7 +147,9 @@ function chooseBadge(license) {
   return badge;
 }
 
+// function to build license section based on license
 function buildLicenseSection(license) {
+  // generate license link
   let licenseLink = "";
   if (license === "Apache 2.0") {
     licenseLink = "[Apache 2.0](https://opensource.org/licenses/Apache-2.0)";
@@ -152,10 +160,9 @@ function buildLicenseSection(license) {
   } else if (license === "WTFPL") {
     licenseLink = "[WTFPL](http://www.wtfpl.net/about/)";
   }
-  let licenseSection;
-  if (license === "none") {
-    licenseSection = "";
-  } else {
+  // generate license section for other than "none"
+  let licenseSection = "";
+  if (license !== "none") {
     licenseSection = `
 ## License
 
