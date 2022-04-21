@@ -76,8 +76,6 @@
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-<<<<<<< HEAD
-=======
 
 
 <!-- GETTING STARTED -->
@@ -104,7 +102,6 @@
 
 
 
->>>>>>> 985e4b5182d5dd76c1e70290cf708e3169f5c778
 <!-- USAGE EXAMPLES -->
 
 ## Usage
@@ -115,14 +112,9 @@ Run `node index.js` from the root of the code repository to begin readme creatio
 
 ### Built With
 
-<<<<<<< HEAD
-- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-- [Node.js](https://nodejs.org/en/)
-=======
 * [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 * [Node.js](https://nodejs.org/en/)
 * [Inquirer.js](https://github.com/SBoudrias/Inquirer.js)
->>>>>>> 985e4b5182d5dd76c1e70290cf708e3169f5c778
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
